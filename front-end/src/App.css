@@ -1,0 +1,104 @@
+.nxl-hasmenu > .nxl-submenu {
+  display: none;
+}
+.nxl-hasmenu.open > .nxl-submenu {
+  display: block;
+}
+.nxl-hasmenu .nxl-arrow {
+  transition: transform 0.3s ease;
+}
+
+.nxl-hasmenu.open .nxl-arrow {
+  transform: rotate(90deg);
+}
+.nxl-hasmenu.open > .nxl-link {
+  background-color: rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+}
+.nxl-submenu .nxl-link.active {
+  color: #0d6efd !important;
+  font-weight: 600;
+}
+a.nxl-link.active {
+    color: red !important;
+}
+
+/* ===========================
+   COMMON DROPDOWN BASE
+=========================== */
+
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  display: block; /* important */
+}
+
+/* ===========================
+   OPEN DROPDOWN (CSS MAGIC)
+=========================== */
+
+/* hover (desktop) */
+.dropdown:hover > .dropdown-menu,
+.dropdown:focus-within > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ===========================
+   HEADER ICON BUTTON FIX
+=========================== */
+
+.nxl-head-link {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* remove bootstrap focus outline */
+.nxl-head-link:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* ===========================
+   USER DROPDOWN IMAGE
+=========================== */
+
+.user-avtar {
+  cursor: pointer;
+}
+
+/* ===========================
+   Z-INDEX FIX (IMPORTANT)
+=========================== */
+
+.dropdown-menu {
+  z-index: 1055;
+}
+
+
+/* Action icon buttons */
+.action-btn {
+  padding: 4px 8px;
+  line-height: 1;
+  border-radius: 6px;
+}
+
+/* Optional hover effect */
+.action-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Light button helpers (if theme doesn't have them) */
+.btn-light-primary {
+  background-color: rgba(13, 110, 253, 0.1);
+  border: none;
+}
+
+.btn-light-danger {
+  background-color: rgba(220, 53, 69, 0.1);
+  border: none;
+}
